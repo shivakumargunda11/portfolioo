@@ -95,7 +95,7 @@ async function handleFormSubmit(event) {
     status.innerHTML = "";
 
     try {
-        const response = await fetch("http://localhost:5000/api/contact", {
+        const response = await fetch("https://portfolioo-4qkt.onrender.com/api/contact", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
