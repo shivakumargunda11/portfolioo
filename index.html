@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Kumar Gunda | Portfolio</title>
+    <meta name="description" content="Portfolio of Shiva Kumar Gunda - CSE Undergraduate and Full-stack Web Developer.">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- DevIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- GSAP & Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body class="dark-theme">
+    <!-- Background Canvas for Three.js -->
+    <canvas id="bg-canvas"></canvas>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="gradient-text">SKG.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <div class="glass-circle circle-1"></div>
+            <div class="glass-circle circle-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text-area">
+                <h5 class="reveal-up">Hello, I'm</h5>
+                <h1 class="reveal-up delay-100">Shiva Kumar <span class="gradient-text">Gunda</span></h1>
+                <h2 class="reveal-up delay-200" id="typing-text">Full-stack Web Developer & CSE Enthusiast</h2>
+                <p class="reveal-up delay-300 hero-objective">"Motivated Computer Science Engineering student with
+                    strong skills in full-stack web development, programming, and problem solving. Passionate about AI
+                    and software development."</p>
+                <div class="hero-btns reveal-up delay-400">
+                    <a href="#projects" class="btn btn-primary btn-hero">View Projects <i
+                            class="fas fa-arrow-right"></i></a>
+                    <div class="download-group">
+                        <a href="resume.pdf" class="btn btn-outline btn-hero" download="Shiva_Kumar_Resume.pdf">Resume
+                            <i class="fas fa-file-pdf"></i></a>
+                        <a href="presentation.pptx" class="btn btn-outline btn-hero"
+                            download="Shiva_Kumar_Presentation.pptx">PPT <i class="fas fa-file-powerpoint"></i></a>
+                    </div>
+                </div>
+                <div class="hero-socials reveal-up delay-500">
+                    <a href="https://github.com/shivakumargunda11" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/gundashivakumar" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/shivakumargunda11" target="_blank" title="LeetCode"><i
+                            class="fas fa-code"></i></a>
+                    <a href="https://geeksforgeeks.org/user/shivakumargunda11" target="_blank" title="GeeksforGeeks"><i
+                            class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-area reveal-right">
+                <div class="image-wrapper">
+                    <!-- User should replace profile.jpg with their actual photo -->
+                    <img src="profile.jpg" alt="Shiva Kumar Gunda" id="profile-img">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="reveal-up">About <span class="gradient-text">Me</span></h2>
+                <div class="underline reveal-up"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <p>I am a Computer Science Engineering undergraduate with a strong foundation in full-stack web
+                        development. I thrive on building efficient backend APIs and intuitive front-end interfaces. My
+                        experience includes developing applications that support 100+ users and managing complex
+                        datasets.</p>
+                    <p>Beyond coding, I'm an active member of my technical community, serving as a Class Representative
+                        and contributing to various clubs like AIML (MALAI) and CSI. I'm always eager to learn new
+                        technologies and apply them to real-world challenges.</p>
+                    <div class="personal-info">
+                        <div class="info-item"><span>Email:</span> <span id="copy-email"
+                                class="copy-email">gundashivakumar11@gmail.com <i class="far fa-copy"></i></span></div>
+                        <div class="info-item"><span>Location:</span> Hyderabad, TS, India</div>
+                        <div class="info-item"><span>Status:</span> Available for Internships</div>
+                    </div>
+                </div>
+                <div class="about-stats reveal-right">
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="8.5">0</h3>
+                        <p>CGPA (B.Tech)</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="100+">0</h3>
+                        <p>Happy Users</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 class="counter" data-target="4">0</h3>
+                        <p>Major Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="leadership-badges reveal-up">
+                <div class="badge-item"><i class="fas fa-users"></i> CSI Member</div>
+                <div class="badge-item"><i class="fas fa-network-wired"></i> IEEE Member</div>
+                <div class="badge-item"><i class="fas fa-brain"></i> Technical Lead (MALAI)</div>
+                <div class="badge-item"><i class="fas fa-graduation-cap"></i> Class Representative</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-alt">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>What <span class="gradient-text">I Do</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal-up">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and high-performance websites using MERN & Next.js stack with focus on modern
+                        UI/UX.</p>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designing secure and scalable RESTful APIs with Node.js, Express, and robust database management.
+                    </p>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI/ML Integration</h3>
+                    <p>Leveraging machine learning models and Generative AI to create intelligent and automated
+                        features.</p>
+                </div>
+                <div class="service-card reveal-up">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating user-centered digital experiences with clean aesthetics and smooth interactive elements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Technical <span class="gradient-text">Proficiency</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag"><i class="devicon-c-plain colored"></i> C</div>
+                        <div class="skill-tag"><i class="devicon-python-plain colored"></i> Python</div>
+                        <div class="skill-tag"><i class="devicon-java-plain colored"></i> Java</div>
+                        <div class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-layer-group"></i> Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag"><i class="devicon-react-original colored"></i> React.js</div>
+                        <div class="skill-tag"><i class="devicon-nextjs-original"></i> Next.js</div>
+                        <div class="skill-tag"><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</div>
+                        <div class="skill-tag"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+                        <div class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5/CSS3</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-server"></i> Backend & DB</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+                        <div class="skill-tag"><i class="devicon-express-original"></i> Express.js</div>
+                        <div class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+                        <div class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag"><i class="devicon-git-plain colored"></i> Git/GitHub</div>
+                        <div class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+                        <div class="skill-tag"><i class="devicon-postman-plain colored"></i> Postman</div>
+                        <div class="skill-tag"><i class="fas fa-robot"></i> Generative AI</div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-brain"></i> Core Concepts</h3>
+                    <div class="skill-list">
+                        <div class="skill-tag"><i class="fas fa-sitemap"></i> Data Structures</div>
+                        <div class="skill-tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</div>
+                        <div class="skill-tag"><i class="fas fa-cube"></i> OOP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Work <span class="gradient-text">Experience</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="experience-list">
+                <div class="exp-item reveal-up">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Software Engineer Intern</h3>
+                            <span class="exp-date">2024 - Present</span>
+                        </div>
+                        <p class="exp-org">YugaYatra Retail (OPC) Pvt. Ltd.</p>
+                        <p class="exp-desc">
+                            • Developed advanced web applications using Cursor AI, Firebase Studio, and modern AI
+                            integration.<br>
+                            • Collaborated on diverse freelancing projects within high-performance teams.<br>
+                            • Streamlined operations by managing complex seller portals on Amazon and Flipkart
+                            platforms.
+                        </p>
+                    </div>
+                </div>
+                <div class="exp-item reveal-up">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Technical Lead & CR</h3>
+                            <span class="exp-date">2024 - Present</span>
+                        </div>
+                        <p class="exp-org">Anurag University | AI/ML Club (MALAI)</p>
+                        <p class="exp-desc">Serving as Class Representative and leading AI initiatives. Coordinating
+                            between 60+ students and faculty while spearheading projects in Generative AI.</p>
+                    </div>
+                </div>
+                <div class="exp-item reveal-up" style="transition-delay: 0.2s;">
+                    <div class="exp-dot"></div>
+                    <div class="exp-content">
+                        <div class="exp-header">
+                            <h3>Full-stack Developer (Self-employed)</h3>
+                            <span class="exp-date">2023 - Present</span>
+                        </div>
+                        <p class="exp-org">Freelance Projects</p>
+                        <p class="exp-desc">Designed and deployed custom web solutions for local clients, focusing on
+                            SEO and performance optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>My <span class="gradient-text">Projects</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: AI Coding Assistant -->
+                <div class="project-card reveal-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/shivakumargunda11" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-img-placeholder"
+                            style="background: var(--gradient-2); height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-robot" style="font-size: 5rem; color: white; opacity: 0.5;"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>AI Coding Assistant</h3>
+                        <p>An extraordinary AI tool engineered to analyze, debug, and optimize code across 20+
+                            programming languages using advanced LLMs.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> Supports 20+ Languages</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time Code Optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated with OpenAI API</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenAI</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card reveal-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/shivakumargunda11" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="event_mgmt.png" alt="Event Management">
+                    </div>
+                    <div class="project-info">
+                        <h3>CampusConnect (MERN)</h3>
+                        <p>A sophisticated campus orchestration platform. I architected the end-to-end flow from
+                            JWT-based secure authentication to a dynamic service request dashboard.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> Secure JWT Authentication</li>
+                            <li><i class="fas fa-check-circle"></i> Scalable MERN Architecture</li>
+                            <li><i class="fas fa-check-circle"></i> Real-time Service Updates</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card reveal-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/shivakumargunda11" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="bus_routing.png" alt="Bus Routing">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bus Routing System</h3>
+                        <p>An algorithmic solution for logistics efficiency using a custom weight-based pathfinding
+                            algorithm for educational institutions.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> 20% Cost Reduction</li>
+                            <li><i class="fas fa-check-circle"></i> Geospatial Logic</li>
+                            <li><i class="fas fa-check-circle"></i> Path Optimization</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Algorithms</span>
+                            <span>Maps API</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: Event Management -->
+                <div class="project-card reveal-up">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/shivakumargunda11" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <img src="event_mgmt.png" alt="Event Management">
+                    </div>
+                    <div class="project-info">
+                        <h3>Event Management Application</h3>
+                        <p>Built a full-stack event platform supporting 100+ concurrent users with real-time dynamic
+                            dashboards and JWT security.</p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-check-circle"></i> Supported 100+ Users</li>
+                            <li><i class="fas fa-check-circle"></i> Dynamic Dashboard</li>
+                            <li><i class="fas fa-check-circle"></i> Secure Booking Flow</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-alt">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Education <span class="gradient-text">Journey</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left reveal-left">
+                    <div class="timeline-content">
+                        <span class="date">2024 - 2028</span>
+                        <h3>B.Tech in Computer Science</h3>
+                        <p class="institution">Anurag University, Hyderabad</p>
+                        <p class="score">CGPA: 8.5</p>
+                    </div>
+                </div>
+                <div class="timeline-item right reveal-right">
+                    <div class="timeline-content">
+                        <span class="date">2022 - 2024</span>
+                        <h3>Intermediate (XII)</h3>
+                        <p class="institution">Narayana IIT Olympiad College</p>
+                        <p class="score">Percentage: 91.5%</p>
+                    </div>
+                </div>
+                <div class="timeline-item left reveal-left">
+                    <div class="timeline-content">
+                        <span class="date">2021 - 2022</span>
+                        <h3>SSC (10th)</h3>
+                        <p class="institution">Jaya Olympiad School</p>
+                        <p class="score">GPA: 9.7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Certs -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Achievements & <span class="gradient-text">Certs</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal-up">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Web Hack Winner</h3>
+                    <p>Winner Web Hack in Tech Hack #4, National Level Hackathon.</p>
+                </div>
+                <div class="achievement-card reveal-up delay-100">
+                    <i class="fas fa-award"></i>
+                    <h3>SIH 2025 Finalist</h3>
+                    <p>Internal Hackathon Winner for Smart India Hackathon 2025.</p>
+                </div>
+                <div class="certification-list reveal-up delay-200">
+                    <div class="cert-item"><i class="fas fa-certificate"></i> Explore Generative AI - Microsoft</div>
+                    <div class="cert-item"><i class="fas fa-certificate"></i> Python Programming - Udemy</div>
+                    <div class="cert-item"><i class="fas fa-certificate"></i> Programming in Java - NPTEL (Elite Silver)
+                    </div>
+                    <div class="cert-item"><i class="fas fa-certificate"></i> Prompt Engineering - IBM</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Get In <span class="gradient-text">Touch</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h3>Contact Information</h3>
+                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your
+                        visions.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>Phone</p>
+                                <span>+91 9666203142</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>Email</p>
+                                <span>gundashivakumar11@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Location</p>
+                                <span>Hyderabad, TS, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="contact-submit">Send Message <i
+                            class="fas fa-paper-plane"></i></button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Shiva Kumar Gunda. All Rights Reserved.</p>
+                    <p class="declaration">"I hereby declare that the above information is true and correct to the best
+                        of my knowledge."</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/shivakumargunda11"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/gundashivakumar"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

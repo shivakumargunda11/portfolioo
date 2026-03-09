@@ -1,0 +1,20 @@
+{
+  "name": "shiva-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Portfolio for Shiva Kumar Gunda",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve .",
+    "start": "npx -y serve ."
+  },
+  "keywords": [],
+  "author": "Shiva Kumar Gunda",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "nodemailer": "^8.0.1"
+  }
+}
