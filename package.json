@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx -y serve .",
-    "start": "npx -y serve ."
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Shiva Kumar Gunda",
