@@ -28,4 +28,4 @@ A modern, dark-themed, and responsive portfolio website built with HTML, CSS, an
 - `profile.jpg`: (User to provide) Your professional headshot.
 - `resume.pdf`: (User to provide) Your downloadable resume.
 
-Built with ❤️ by Antigravity.
+
